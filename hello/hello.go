@@ -4,6 +4,6 @@ import "fmt"
 
 func main(){
 
-  fmt.Printf("Ohhai i writes go nao\n")
+  fmt.Println("Ohhai i writes go nao\n")
 
 }
