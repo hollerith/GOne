@@ -15,7 +15,7 @@ type Person struct {
 func main() {
         session, err := mgo.Dial("server1.example.com,server2.example.com")
         if err != nil {
-                panic(err)
+          panic(err)
         }
         defer session.Close()
 
@@ -26,13 +26,13 @@ func main() {
         err = c.Insert(&Person{"Ale", "+55 53 8116 9639"},
 	               &Person{"Cla", "+55 53 8402 8510"})
         if err != nil {
-                log.Fatal(err)
+          log.Fatal(err)
         }
 
         result := Person{}
         err = c.Find(bson.M{"name": "Ale"}).One(&result)
         if err != nil {
-                log.Fatal(err)
+          log.Fatal(err)
         }
 
         fmt.Println("Phone:", result.Phone)
